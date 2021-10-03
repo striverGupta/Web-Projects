@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>
+            Madhu Gupta | Personal Website
+        </title>
+        <link rel="icon" href="images/favicon.JPG" type="image" sizes="16x16">
+        <meta name="description" content="Hey Everyone! Madhu Gupta this side.. Go and checkout my personal website and tell us what u like the most !">
+       
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/resume.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+    </head>
+      
+    <body > 
+       <header>
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #305371">
+          <div>
+            <img class="logo-img" src="images/logo.jpg" type="image" >
+
+            <div class="logo" >
+              
+            </div>
+            
+          </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                 
+                  <a  class="nav-link text-white"  href="index.html">Home</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link text-white" href="todo.html">Todo app</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-white" href="light.html">Try-It</a>
+                  </li>
+                <li class="nav-item ">
+                    <a class="nav-link " style=" color: red;font-weight: 900;" href="resume.html">Resume Builder</a>
+                  </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+       </header>
+
+       <resume>
+           
+   <div class="container" id="cv-form">
+    <h1 class="text-center my-2" >Resume Generator</h1>
+    <p class="text-center my-2">By Madhu Gupta [B.tech (cse)]</p>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <!--first col-->
+            <h3>Personal Information</h3>
+            <div class="form-group">
+                <label for="namefiled">Your Name</label>
+                 <input 
+                 type="text"
+                 id="nameFiled" 
+                 placeholder="Enter Here"
+                 class="form-control"
+                 />
+            </div>
+            <div class="form-group my-2">
+                <label for="contactfilled">Your Contact Number</label>
+                 <input
+                 type="text"
+                 id="contactfilled" 
+                 placeholder="Enter Here"
+                 class="form-control"/>
+            </div>
+            <div class="form-group my-2">
+                <label for="addressfilled">Your Address</label>
+                 <textarea 
+                 id="addressfilled" 
+                 placeholder="Enter Here"
+                 class="form-control"
+                 rows="5"
+                 ></textarea>
+            </div>
+
+            <p class="text-secondary my-3">Important Links</p>
+            <div class="form-group my-2">
+                <label for="fbfilled">Facebook </label>
+                 <input
+                 type="text"
+                 id="fbfilled" 
+                 placeholder="Enter Here"
+                 class="form-control"/>
+            </div>
+            <div class="form-group my-2">
+                <label for="instafilled">Instagram </label>
+                 <input
+                 type="text"
+                 id="instafilled" 
+                 placeholder="Enter Here"
+                 class="form-control"/>
+            </div>
+            <div class="form-group my-2">
+                <label for="Twitterfilled">Twitter </label>
+                 <input
+                 type="text"
+                 id="Twitterfilled" 
+                 placeholder="Enter Here"
+                 class="form-control"/>
+            </div>
+            <div class="form-group my-2">
+                <label for="Linkendfilled"> Linkendin </label>
+                 <input
+                 type="text"
+                 id="Linkendfilled" 
+                 placeholder="Enter Here"
+                 class="form-control"/>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3>Professional Information</h3>
+            <!--second col--> 
+            <!--bootstrap grid-->
+            <div class="form-group my-2">
+                <label for="">Objective</label>
+                 <textarea
+                 id="ObjectiveField"
+                 placeholder="Enter Here"
+                 class="form-control "
+                 rows="5"
+                 ></textarea>
+            </div>
+            <div class="form-group my-2" id="we">
+                <label for="">Work Experience</label>
+                 <textarea
+                
+                 placeholder="Enter Here"
+                 class="form-control wefield "
+                 rows="3"
+                 ></textarea>
+
+                 <!--new textarea-->
+
+                 <div class="container text-center mt-2 "id="weAddButton">
+                     <button onclick="addnewWEField()" class="btn btn-primary btn-sm">Add</button>
+                     <button onclick="deleteWe()" class="btn btn-danger btn-sm">delete</button>
+                 </div>
+            </div>
+
+            <div class="form-group my-2" id="aq">
+                <label for="">Academic Qualification</label>
+                 <textarea
+                 placeholder="Enter Here"
+                 class="form-control aqfield "
+                 rows="3"
+                 ></textarea>
+
+                 <div class="container text-center mt-2" id="aqAddButton">
+                     <button  onclick="addnewAQField()"class="btn btn-primary btn-sm">Add</button>
+                     <button onclick="deleteAq()" class="btn btn-danger btn-sm">delete</button>
+                 </div>
+            </div>
+
+            <div class="form-group my-2" id="aq">
+                <label for="">Profile pic</label>
+                 <div>
+                    <input src="" id="setProfile" class="form-control" type="file" multiple accept="image/*" />
+                 </div>
+
+                 
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <button  onclick ="generateCV()"class="btn btn-primary btn-lg">Generate CV</button>   
+    </div>
+   </div>
+
+
+   <!--cv template-->
+
+   <div class="container" id="cv-template">
+       <div>
+           <h1 class="text-center text-primary">
+            Curriculum Vitae
+           </h1>
+           <hr>
+       
+       </div>
+       <br><br>
+      
+        <div class="row">
+
+            <div class="col-md-4 text-center py-5 background">
+                <!--first column-->
+                <img 
+                src="profile.png"
+                id="profile"
+                alt=""
+                class="img-fluid myimg"
+                />
+
+                <div class="container">
+                    <p id="nameT1">
+                        Madhu Gupta </p><br>
+                   <i class="fa fa-phone-alt"></i> <span id="contactT2">
+                       +915636890886,+9147657848</span><br>
+                    <i class="fa fa-home"></i> <span id="addressT3">
+                       5764/468 sector 32 faridabad, INDIA</span>
+
+                       <hr/>
+                <i class="fab fa-facebook-f"></i>&nbsp<a href="#1"><span id="FBT"></span></a><br>
+                <i class="fab fa-instagram"></i>&nbsp<a href="#1"><span id="INSTAT"></span></a><br>
+                <i class="fab fa-twitter"></i>&nbsp<a href="#1"><span id="TWIT"></span></a><br>
+                <i class="fab fa-linkedin"></i>&nbsp<a href="#1"><span id="LINKT"></span></a><br>
+
+                </div>
+            </div>
+
+            <div class="col-md-8 " >
+                <!--second column-->
+                <h1 id="nameT2" class="text-center " style="font-weight: 900;">
+                    Madhu Gupta
+                </h1>
+             <!--object cards-->
+
+             <div class="card mt-4">
+                 <div class="card-header background">
+                  <h3 >Objective</h3>
+                 </div>
+                 <div class="card-body"> 
+                    
+                 <p id ="ObjectiveT2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto aspernatur, ducimus maiores 
+                     adipisci excepturi fugit consequuntur repellat animi debitis sint quas provident! Iure,
+                     deleniti sunt nemo autem illum quibusdam harum? Explicabo vitae libero dolor soluta ex at? 
+                     Molestiae commodi at impedit ratione, 
+                     tempore exercitationem, nulla sequi ducimus ex deserunt hic.</p>
+                 </div>
+             </div>
+               <!--work experience-->
+             <div class="card mt-4">
+                <div class="card-header background">
+                 <h3>Work Experience</h3>
+                </div>
+                <div class="card-body"> 
+                   
+                <ul id="WET2">
+                     <li >
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.  
+                    </li>
+                    <li >
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.  
+                    </li>
+                    <li >
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.  
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <!--acadmeic qualification-->
+            <div class="card mt-4">
+                <div class="card-header background">
+                 <h3>Academic Qualification</h3>
+                </div>
+                <div class="card-body"> 
+                   
+                <ul id="AQT3">
+                     <li >
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.  
+                    </li>
+                    <li >
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.  
+                    </li>
+                    <li >
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.  
+                    </li>
+                </ul>
+                </div>
+            </div>
+
+            <div class="container mt-3 text-center">
+                <button  onclick="printCV()"class="btn background">
+                    Print CV
+                </button>
+            </div>
+            </div>
+
+        </div>
+   </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+       </resume>
+
+       <footer style="height: 150px;background-color: black">
+        <div>
+          <h3 class="text-center text-white" style="letter-spacing: 5px;">You can find us here</h3>
+        </div>
+        <div style="font-size: 20px;color:black" class="text-center">
+          <a href="https://gmail.com"><i class="fa fa-envelope" ></i></a> &nbsp
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>&nbsp
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a> &nbsp
+          <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a> &nbsp
+          <br>
+          <br>
+          <div>
+            <h5 class="text-center text-white" style="font-size: 15px;">COPYRIGHT @2021 | ALL RIGHT RESERVED BY Madhu Gupta</h5>
+          </div>
+        </div>
+      
+
+     </footer>
+
+   
+
+
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+
+    </body>
+</html>
+

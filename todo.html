@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>
+          Madhu Gupta | Personal Website
+        </title>
+        <link rel="icon" href="images/favicon.JPG" type="image" sizes="16x16">
+        <meta name="description" content="Hey Everyone! Madhu Gupta this side.. Go and checkout my personal website and tell us what u like the most !">
+       
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+    </head>
+      
+    <body > 
+       <header>
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #305371">
+          <div>
+            <img class="logo-img" src="images/logo.jpg" type="image" >
+
+            <div class="logo" >
+              
+            </div>
+            
+          </div>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                 
+                  <a  class="nav-link text-white"  href="index.html">Home</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link "  style=" color: red;font-weight: 900;" href="todo.html">Todo app</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link text-white" href="light.html">Try-it</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link text-white" href="resume.html">Resume Builder</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+       </header>
+
+       <todo >
+            
+                <div class="container my-2" style="background-color: #305371;">
+                    <h1 id="todo-heading">TODO APPLICATION</h1>
+                    <div class="card">
+                        <div class="card-body">
+
+                            <form action="#">
+
+                            <input
+                            id="title"
+                            type="text" 
+                            class="form-control" 
+                            placeholder="Enter Todo title"/>
+                            <br>
+
+                            <textarea 
+                            id="desc"
+                            cols="30" 
+                            rows="10" 
+                            class="form-control" 
+                            placeholder="Enter todo description"
+                            ></textarea>
+
+                            <div class="container text-center my-2">
+                                <button  onclick="addTodo()" type="reset" class="btn btn-primary">
+                                    ADD TODO
+                                </button>
+                            </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="main-content" id="main-content"></div>
+                </div>
+
+
+       </todo>
+
+
+       <footer style="height: 150px;background-color: black">
+        <div>
+          <h3 class="text-center text-white" style="letter-spacing: 5px;">You can find us here</h3>
+        </div>
+        <div style="font-size: 20px;color:black" class="text-center">
+          <a href="https://gmail.com"><i class="fa fa-envelope" ></i></a> &nbsp
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>&nbsp
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a> &nbsp
+          <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a> &nbsp
+          <br>
+          <br>
+          <div>
+            <h5 class="text-center text-white" style="font-size: 15px;">COPYRIGHT @2021 | ALL RIGHT RESERVED BY Madhu Gupta</h5>
+          </div>
+        </div>
+      
+
+     </footer>
+
+   
+
+
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+//Arrow function:
+let addTodo = ()=>{
+            let title=document.getElementById("title").value;
+            let desc=document.getElementById("desc").value;
+
+            if(title=="" || desc==""){
+                alert("please enter the title and description! ")
+            }else{
+                add_todo();
+            }
+        }
+
+    const add_todo=()=>{
+    let title=document.getElementById("title").value;
+    let desc=document.getElementById("desc").value;
+    let todos=[];
+
+        // string
+        let localTodos=localStorage.getItem("todos");
+
+        if(localTodos!=null)
+        {
+            todos=JSON.parse(localTodos); //string value convert in to object.
+        }
+
+        let todoObject={
+            title:title,
+            desc:desc,
+            id:Math.trunc(Math.random()*1000),
+        };
+
+
+        todos.push(todoObject);
+        localStorage.setItem("todos",JSON.stringify(todos));
+
+        console.log(localTodos);
+
+        show_todo();
+//localStorage.setItem(key(todos),value[array{title,description},{title,description},{title,description},]);
+
+  todos=>[]
+
+};//show the data
+ const show_todo=()=>
+{
+    let todoString=localStorage.getItem("todos")
+    let content = "";
+if (todoString == null)  
+{ 
+    // no todo
+    content+="<h3 class='text-white'> NO TODO TO SHOW</h3>";
+}else{
+    let todos = JSON.parse(todoString);
+    todos.reverse();
+    for(let todo of todos){
+        content+=`
+            <div class='card'>
+            <div class="card-body card-body-todo">
+                
+                <h3>${todo.title}</h3>
+                <p>${todo.desc}</p>
+              </div>  
+                </div><button class="btn btn-danger delete" onclick="deleteNode(${todo.id})">X</button> <br>
+            ` };
+};
+document.getElementById('main-content').innerHTML=content;
+};
+show_todo();    
+
+  const deleteNode = (id)=>{
+    let todoString=localStorage.getItem("todos");
+    let todo= JSON.parse(todoString);
+    console.log(todo);
+    let newarr=[];
+    let count=0;
+
+    for(let t of todo){
+      if(t.id==id){
+
+      }else{
+        newarr[count]=t;
+        count++;
+      }
+    }
+    console.log(newarr);
+    localStorage.setItem("todos",JSON.stringify(newarr));
+    location.reload();
+  }
+
+</script>
+    </body>
+</html>
+

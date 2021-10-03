@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Rock</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/signup.css">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-image:url('image/images.jpeg');background-repeat: no-repeat;background-size: cover;" >
+    <header>
+        <nav>
+            <div style="display: flex">
+                <div style="flex: 1;" >
+                    <a href="index.html" style="cursor: pointer;"><img  src="image/logo.png" style="border-radius: 50%;width: 100px;height: 100px;margin: 20px 0px 0px 50px;">
+                    </a>
+                </div>
+                <div style="flex: 10;" >
+                    <ul class ="main-nav">
+                        <li><a href="index.html"> HOME</a></li>
+                        <li><a href="#"> HOW TO ORDER</a></li>
+                        <li><a href="#"> CHECK MORE</a></li>
+                        <li ><a class="active" href="signup.html"> Sign Up</a></li>
+                    </ul>
+                </div>
+               
+               
+            </div>
+        </nav>
+        
+    </header>
+
+    <div>
+        <div class="main_div">
+            <div class="box">
+                <h1>
+                    Signup Here !
+                </h1>
+                <form method="" action="">
+                    <div class="inputbox">
+                        <input type="text" name="username" autocomplete="off" required>
+                        <label> username</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="password" name="password" autocomplete="off" required>
+   <label> password</label>
+       </div>
+         
+         <button type="submit" name="" vlaue="login">LOGIN</button>
+                 </form>
+     </div>
+
+</div>
+
+    </div>
+   <script>
+       var time= new Date();
+       var a= time.getHours();
+      
+    if(a>5 && a<12){
+        console.log("Good morning");
+    }else if(a>=12 && a<17){
+        console.log("Good Afternoon");
+    }else if(a>=17 && a<=22){
+        console.log("Good evening");
+    }else {
+        console.log("Good night");
+    }
+
+    
+    var arr= ['image1.jpeg.image2.jpeg,image3.jpeg'];
+     setInterval(function(){
+         var image= Math.floor(Math.random()*3);
+         if(image==0){
+            document.body.style.backgroundImage = "url('images/image3.jpeg')";
+            document.body.style.transitionDuration= "0.5s";
+         }else if(image==1){
+            document.body.style.backgroundImage = "url('images/image2.jpeg')";
+            document.body.style.transitionDuration= "0.5s";
+         }else if(image==2){
+            document.body.style.backgroundImage = "url('images/image1.jpeg')";
+            document.body.style.transitionDuration= "0.5s";
+         }
+         
+      
+     },2500)
+    </script>
+</body>
+</html>
